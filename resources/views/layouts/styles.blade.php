@@ -12,4 +12,11 @@
     <link rel="stylesheet" href="{{ asset('css/revoulation.css') }}">
     <!-- style CSS -->
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <style>
+        .shop-cart{
+            margin: auto;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+        }
+    </style>
 @endsection

@@ -5,7 +5,7 @@
                 <div class="footer-widget">
                     <div class="textwidget">
                         <a href="index.html" class="footer-logo">
-                            <img src="assets/img/logo/logo.svg" alt="Logo">
+                            <img src="{{asset('assets/img/logo/logo.svg')}}" alt="Logo">
                         </a>
                     </div>
                 </div>
@@ -103,7 +103,7 @@
                 <p class="copyright-text">&copy;2018 AIRI. Designed by HasTech</p>
             </div>
             <div class="col-md-4 text-md-right">
-                <img src="assets/img/others/payments-2.png" alt="Payment">
+                <img src="{{asset('assets/img/others/payments-2.png')}}" alt="Payment">
             </div>
         </div>
     </div>

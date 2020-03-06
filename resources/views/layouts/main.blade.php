@@ -35,6 +35,7 @@
     <div class="wrapper">
         @include('partials.header')
         @include('partials.mobile_header')
+        @include('partials.modal')
         @yield('content')
         @include('partials.footer')
         @include('partials.shopping')
@@ -60,15 +61,71 @@
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- jQuery JS -->
-    <script src="assets/js/vendor/jquery.min.js"></script>
+    <script src=" {{asset('/assets/js/vendor/jquery.min.js')}}"></script>
     <!-- Bootstrap and Popper Bundle JS -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src=" {{asset('/assets/js/bootstrap.bundle.min.js')}}"></script>
     <!-- All Plugins Js -->
-    <script src="assets/js/plugins.js"></script>
+    <script src=" {{asset('/assets/js/plugins.js')}}"></script>
     <!-- Ajax Mail Js -->
-    <script src="assets/js/ajax-mail.js"></script>
+    <script src=" {{asset('/assets/js/ajax-mail.js')}}"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src=" {{asset('/assets/js/main.js')}}"></script>
+    <!-- Cart JS -->
+    <script src=" {{asset('/assets/js/cart.js')}}"></script>
+    <script>
+        $('body').on('click','.remove',function(){
+            product_id = $(this).data('product');
+            var atag = $(this);
+            option_id = $(this).data('option');
+            $.ajax({
+                url: "{{action('BasketController@removeItem')}}",
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    'product_id':product_id,
+                    'option_id':option_id
+                },
+                success: function(data) {
+                    atag.parent().remove();
+                    subtotal_update();
+                },error: function(msg){
+                    if( msg.status === 422 ) {
+                        var errors = msg.responseJSON;
+                        var errorsHtml = '';
+                        $.each(errors['errors'], function (index, value) {
+                            errorsHtml += '<ul class="list-group"><li class="list-group-item alert alert-danger">' + value + '</li></ul>';
+                        });
+                        swal.fire({
+                            title: "Error " + msg.status,// this will output "Error 422: Unprocessable Entity"
+                            html: errorsHtml,
+                            width: 'auto',
+                            confirmButtonText: 'Try again',
+                            cancelButtonText: 'Cancel',
+                            confirmButtonClass: 'btn',
+                            cancelButtonClass: 'cancel-class',
+                            showCancelButton: true,
+                            closeOnConfirm: true,
+                            closeOnCancel: true,
+                            type: 'error'
+                        });
+                    }
+
+                }
+
+            });
+        });
+
+    </script>
+    @if(session('message'))
+    <script>
+        $(document).ready(function(){
+            var message = "{{session('message')}}";
+            if(message.length>0) {
+                $('#productModal').modal();
+            };
+        });
+    </script>
+    @endif
     @yield('scripts')
 </body>
 </html>

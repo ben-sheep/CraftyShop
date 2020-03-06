@@ -14,6 +14,13 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -117,25 +124,47 @@
       <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/arrilot/laravel-widgets" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/darryldecode/cart" />
+      <path value="$PROJECT_DIR$/vendor/moneyphp/money" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/laravel/cashier" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/laraveldaily/laravel-invoices" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/orangehill/iseed" />
     </include_path>
   </component>
   <component name="ProjectId" id="1UQxCQlB3JolF7bnCPOAZH99N3l" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/partials" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programs HDD\Xampp\htdocs\ecom_first\resources\views\partials" />
+      <recent name="D:\Programs HDD\Xampp\htdocs\ecom_first\resources\views\pages\checkout" />
+      <recent name="D:\Programs HDD\Xampp\htdocs\ecom_first\resources\views\pages" />
+      <recent name="D:\Programs HDD\Xampp\htdocs\ecom_first\resources\views\pages\login_register" />
       <recent name="D:\Programs HDD\Xampp\htdocs\ecom_first\resources\views" />
-      <recent name="D:\Programs HDD\Xampp\htdocs\ecom_first\resources\views\layouts" />
-      <recent name="D:\Programs HDD\Xampp\htdocs\ecom_first\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programs HDD\Xampp\htdocs\ecom_first\resources\views\pages\checkout" />
+      <recent name="D:\Programs HDD\Xampp\htdocs\ecom_first\resources\views\pages\contact" />
+      <recent name="D:\Programs HDD\Xampp\htdocs\ecom_first\resources\views\pages\login_register" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -169,6 +198,27 @@
       <workItem from="1575302494780" duration="3409000" />
       <workItem from="1575477912504" duration="4895000" />
       <workItem from="1575558294309" duration="32958000" />
+      <workItem from="1575932898153" duration="4141000" />
+      <workItem from="1575996748405" duration="20730000" />
+      <workItem from="1576603033836" duration="30623000" />
+      <workItem from="1576863187525" duration="10943000" />
+      <workItem from="1580827533156" duration="9170000" />
+      <workItem from="1580914574936" duration="8644000" />
+      <workItem from="1581010330705" duration="10594000" />
+      <workItem from="1581092517875" duration="7051000" />
+      <workItem from="1581518276422" duration="4882000" />
+      <workItem from="1581614779716" duration="1087000" />
+      <workItem from="1581944967498" duration="5079000" />
+      <workItem from="1582042079576" duration="8002000" />
+      <workItem from="1582124965597" duration="29607000" />
+      <workItem from="1582380531349" duration="43625000" />
+      <workItem from="1582728491288" duration="10968000" />
+      <workItem from="1582821159217" duration="6721000" />
+      <workItem from="1582908621723" duration="10489000" />
+      <workItem from="1582987972864" duration="17461000" />
+      <workItem from="1583070973557" duration="22046000" />
+      <workItem from="1583233227223" duration="9026000" />
+      <workItem from="1583506823981" duration="15509000" />
     </task>
     <servers />
   </component>
@@ -187,5 +237,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/layouts/styles.blade.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

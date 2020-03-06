@@ -1,69 +1,348 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use TCG\Voyager\Models\DataType;
 
 class DataTypesTableSeeder extends Seeder
 {
+
     /**
-     * Auto generated seed file.
+     * Auto generated seed file
+     *
+     * @return void
      */
     public function run()
     {
-        $dataType = $this->dataType('slug', 'users');
-        if (!$dataType->exists) {
-            $dataType->fill([
-                'name'                  => 'users',
-                'display_name_singular' => __('voyager::seeders.data_types.user.singular'),
-                'display_name_plural'   => __('voyager::seeders.data_types.user.plural'),
-                'icon'                  => 'voyager-person',
-                'model_name'            => 'TCG\\Voyager\\Models\\User',
-                'policy_name'           => 'TCG\\Voyager\\Policies\\UserPolicy',
-                'controller'            => 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController',
-                'generate_permissions'  => 1,
-                'description'           => '',
-            ])->save();
-        }
+        
 
-        $dataType = $this->dataType('slug', 'menus');
-        if (!$dataType->exists) {
-            $dataType->fill([
-                'name'                  => 'menus',
-                'display_name_singular' => __('voyager::seeders.data_types.menu.singular'),
-                'display_name_plural'   => __('voyager::seeders.data_types.menu.plural'),
-                'icon'                  => 'voyager-list',
-                'model_name'            => 'TCG\\Voyager\\Models\\Menu',
-                'controller'            => '',
-                'generate_permissions'  => 1,
-                'description'           => '',
-            ])->save();
-        }
-
-        $dataType = $this->dataType('slug', 'roles');
-        if (!$dataType->exists) {
-            $dataType->fill([
-                'name'                  => 'roles',
-                'display_name_singular' => __('voyager::seeders.data_types.role.singular'),
-                'display_name_plural'   => __('voyager::seeders.data_types.role.plural'),
-                'icon'                  => 'voyager-lock',
-                'model_name'            => 'TCG\\Voyager\\Models\\Role',
-                'controller'            => '',
-                'generate_permissions'  => 1,
-                'description'           => '',
-            ])->save();
-        }
-    }
-
-    /**
-     * [dataType description].
-     *
-     * @param [type] $field [description]
-     * @param [type] $for   [description]
-     *
-     * @return [type] [description]
-     */
-    protected function dataType($field, $for)
-    {
-        return DataType::firstOrNew([$field => $for]);
+        \DB::table('data_types')->delete();
+        
+        \DB::table('data_types')->insert(array (
+            0 => 
+            array (
+                'id' => 1,
+                'name' => 'users',
+                'slug' => 'users',
+                'display_name_singular' => 'User',
+                'display_name_plural' => 'Users',
+                'icon' => 'voyager-person',
+                'model_name' => 'TCG\\Voyager\\Models\\User',
+                'policy_name' => 'TCG\\Voyager\\Policies\\UserPolicy',
+                'controller' => 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController',
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"desc","default_search_key":null,"scope":null}',
+                'created_at' => '2019-12-02 16:28:04',
+                'updated_at' => '2020-03-06 15:30:08',
+            ),
+            1 => 
+            array (
+                'id' => 2,
+                'name' => 'menus',
+                'slug' => 'menus',
+                'display_name_singular' => 'Menu',
+                'display_name_plural' => 'Menus',
+                'icon' => 'voyager-list',
+                'model_name' => 'TCG\\Voyager\\Models\\Menu',
+                'policy_name' => NULL,
+                'controller' => '',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2019-12-02 16:28:04',
+                'updated_at' => '2019-12-02 16:28:04',
+            ),
+            2 => 
+            array (
+                'id' => 3,
+                'name' => 'roles',
+                'slug' => 'roles',
+                'display_name_singular' => 'Role',
+                'display_name_plural' => 'Roles',
+                'icon' => 'voyager-lock',
+                'model_name' => 'TCG\\Voyager\\Models\\Role',
+                'policy_name' => NULL,
+                'controller' => '',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2019-12-02 16:28:04',
+                'updated_at' => '2019-12-02 16:28:04',
+            ),
+            3 => 
+            array (
+                'id' => 4,
+                'name' => 'categories',
+                'slug' => 'categories',
+                'display_name_singular' => 'Category',
+                'display_name_plural' => 'Categories',
+                'icon' => 'voyager-categories',
+                'model_name' => 'TCG\\Voyager\\Models\\Category',
+                'policy_name' => NULL,
+                'controller' => '',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2019-12-02 16:28:14',
+                'updated_at' => '2019-12-02 16:28:14',
+            ),
+            4 => 
+            array (
+                'id' => 5,
+                'name' => 'posts',
+                'slug' => 'posts',
+                'display_name_singular' => 'Post',
+                'display_name_plural' => 'Posts',
+                'icon' => 'voyager-news',
+                'model_name' => 'TCG\\Voyager\\Models\\Post',
+                'policy_name' => 'TCG\\Voyager\\Policies\\PostPolicy',
+                'controller' => '',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2019-12-02 16:28:15',
+                'updated_at' => '2019-12-02 16:28:15',
+            ),
+            5 => 
+            array (
+                'id' => 6,
+                'name' => 'pages',
+                'slug' => 'pages',
+                'display_name_singular' => 'Page',
+                'display_name_plural' => 'Pages',
+                'icon' => 'voyager-file-text',
+                'model_name' => 'TCG\\Voyager\\Models\\Page',
+                'policy_name' => NULL,
+                'controller' => '',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2019-12-02 16:28:17',
+                'updated_at' => '2019-12-02 16:28:17',
+            ),
+            6 => 
+            array (
+                'id' => 7,
+                'name' => 'home_page_slider',
+                'slug' => 'home-page-slider',
+                'display_name_singular' => 'Home Page Slider',
+                'display_name_plural' => 'Home Page Sliders',
+                'icon' => NULL,
+                'model_name' => 'App\\HomePageSlider',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+                'created_at' => '2019-12-04 18:23:17',
+                'updated_at' => '2019-12-04 18:23:17',
+            ),
+            7 => 
+            array (
+                'id' => 8,
+                'name' => 'home_page_sliders',
+                'slug' => 'home-page-sliders',
+                'display_name_singular' => 'Home Page Slider',
+                'display_name_plural' => 'Home Page Sliders',
+                'icon' => NULL,
+                'model_name' => 'App\\HomePageSlider',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+                'created_at' => '2019-12-04 18:28:43',
+                'updated_at' => '2019-12-04 18:28:43',
+            ),
+            8 => 
+            array (
+                'id' => 9,
+                'name' => 'products',
+                'slug' => 'products',
+                'display_name_singular' => 'Product',
+                'display_name_plural' => 'Products',
+                'icon' => NULL,
+                'model_name' => 'App\\Product',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2019-12-06 17:01:34',
+                'updated_at' => '2020-02-19 17:24:01',
+            ),
+            9 => 
+            array (
+                'id' => 10,
+                'name' => 'shop_categories',
+                'slug' => 'shop-categories',
+                'display_name_singular' => 'Shop Category',
+                'display_name_plural' => 'Shop Categories',
+                'icon' => NULL,
+                'model_name' => 'App\\ShopCategory',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2019-12-06 17:12:21',
+                'updated_at' => '2019-12-09 18:36:29',
+            ),
+            10 => 
+            array (
+                'id' => 11,
+                'name' => 'product_images',
+                'slug' => 'product-images',
+                'display_name_singular' => 'Product Image',
+                'display_name_plural' => 'Product Images',
+                'icon' => NULL,
+                'model_name' => 'App\\ProductImage',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2019-12-06 17:41:57',
+                'updated_at' => '2019-12-11 15:52:11',
+            ),
+            11 => 
+            array (
+                'id' => 12,
+                'name' => 'features',
+                'slug' => 'features',
+                'display_name_singular' => 'Feature',
+                'display_name_plural' => 'Features',
+                'icon' => NULL,
+                'model_name' => 'App\\Feature',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2019-12-06 18:24:26',
+                'updated_at' => '2019-12-09 18:33:25',
+            ),
+            12 => 
+            array (
+                'id' => 13,
+                'name' => 'options',
+                'slug' => 'options',
+                'display_name_singular' => 'Option',
+                'display_name_plural' => 'Options',
+                'icon' => NULL,
+                'model_name' => 'App\\Option',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2019-12-10 16:22:16',
+                'updated_at' => '2019-12-11 16:04:01',
+            ),
+            13 => 
+            array (
+                'id' => 14,
+                'name' => 'groups',
+                'slug' => 'groups',
+                'display_name_singular' => 'Group',
+                'display_name_plural' => 'Groups',
+                'icon' => NULL,
+                'model_name' => 'App\\Group',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2019-12-10 17:31:18',
+                'updated_at' => '2019-12-10 17:36:01',
+            ),
+            14 => 
+            array (
+                'id' => 15,
+                'name' => 'reviews',
+                'slug' => 'reviews',
+                'display_name_singular' => 'Review',
+                'display_name_plural' => 'Reviews',
+                'icon' => NULL,
+                'model_name' => 'App\\Review',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2019-12-18 16:12:57',
+                'updated_at' => '2019-12-18 16:41:59',
+            ),
+            15 => 
+            array (
+                'id' => 17,
+                'name' => 'order_products',
+                'slug' => 'order-products',
+                'display_name_singular' => 'Order Product',
+                'display_name_plural' => 'Order Products',
+                'icon' => NULL,
+                'model_name' => 'App\\OrderProduct',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-02-04 17:01:09',
+                'updated_at' => '2020-02-17 13:43:40',
+            ),
+            16 => 
+            array (
+                'id' => 18,
+                'name' => 'discount',
+                'slug' => 'discount',
+                'display_name_singular' => 'Discount',
+                'display_name_plural' => 'Discounts',
+                'icon' => NULL,
+                'model_name' => 'App\\Discount',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+                'created_at' => '2020-02-17 13:25:12',
+                'updated_at' => '2020-02-17 13:25:12',
+            ),
+            17 => 
+            array (
+                'id' => 19,
+                'name' => 'basket_items',
+                'slug' => 'basket-items',
+                'display_name_singular' => 'Basket Item',
+                'display_name_plural' => 'Basket Items',
+                'icon' => NULL,
+                'model_name' => 'App\\BasketItem',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-02-18 16:19:12',
+                'updated_at' => '2020-02-18 16:52:47',
+            ),
+        ));
+        
+        
     }
 }

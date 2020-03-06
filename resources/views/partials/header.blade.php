@@ -6,23 +6,17 @@
                     <div class="col-lg-2 col-md-3 col-4 order-1">
                         <div class="header-left d-flex">
                             <!-- Logo Start Here -->
-                            <a href="index.html" class="logo-box">
+                            <a href="{{route('pages')}}" class="logo-box">
                                 <figure class="logo--normal">
-                                    <img src="assets/img/logo/logo.svg" alt="Logo" />
+                                    <img src="{{asset('assets/img/logo/logo.svg')}}" alt="Logo" />
                                 </figure>
                                 <figure class="logo--transparency">
-                                    <img src="assets/img/logo/logo-white.png" alt="Logo" />
+                                    <img src="{{asset('assets/img/logo/logo-white.png')}}" alt="Logo" />
                                 </figure>
                             </a>
                             <!-- Logo End Here -->
 
-                            <ul class="header-toolbar">
-                                <li class="header-toolbar__item d-none d-lg-block">
-                                    <a href="#sideNav" class="toolbar-btn">
-                                        <i class="dl-icon-menu2"></i>
-                                    </a>
-                                </li>
-                            </ul>
+
                         </div>
                     </div>
 
@@ -31,7 +25,7 @@
                         <nav class="main-navigation">
                             <ul class="mainmenu mainmenu--centered">
                                 <li class="mainmenu__item menu-item-has-children megamenu-holder">
-                                    <a href="index.html" class="mainmenu__link">
+                                    <a href="{{route("pages")}}" class="mainmenu__link">
                                         <span class="mm-text">Home</span>
                                     </a>
                                     <ul class="megamenu four-column">
@@ -168,22 +162,22 @@
                                 <li class="mainmenu__item menu-item-has-children">
                                     <a href="shop-sidebar.html" class="mainmenu__link">
                                         <span class="mm-text">Shop</span>
-                                        <span class="tip">Hot</span>
+                                        <!--<span class="tip">Hot</span>-->
                                     </a>
                                     <ul class="megamenu four-column">
                                         <li>
                                             <a class="megamenu-title" href="#">
-                                                <span class="mm-text">Shop Layout</span>
+                                                <span class="mm-text">Products</span>
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a href="shop-fullwidth.html">
-                                                        <span class="mm-text">FullWidth</span>
+                                                    <a href="{{action('ProductController@get',1)}}">
+                                                        <span class="mm-text">Product 1</span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="shop-sidebar.html">
-                                                        <span class="mm-text">with Sidebar</span>
+                                                    <a href="{{action('ProductController@get',2)}}">
+                                                        <span class="mm-text">Product 2</span>
                                                     </a>
                                                 </li>
                                                 <li>
@@ -357,69 +351,13 @@
                                 </li>
                                 <li class="mainmenu__item menu-item-has-children has-children">
                                     <a href="blog.html" class="mainmenu__link">
-                                        <span class="mm-text">Blog</span>
+                                        <span class="mm-text">Contact</span>
                                     </a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item-has-children has-children">
-                                            <a href="#">
-                                                <span class="mm-text">Blog Grid</span>
+                                        <li class="menu-item">
+                                            <a href="{{route('contact')}}">
+                                                <span class="mm-text">Contact</span>
                                             </a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="blog-02-columns.html">
-                                                        <span class="mm-text">Blog 02 Columns</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-03-columns.html">
-                                                        <span class="mm-text">Blog 03 Columns</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children has-children">
-                                            <a href="#">
-                                                <span class="mm-text">Blog List</span>
-                                            </a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="blog.html">
-                                                        <span class="mm-text">Blog Sidebar</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-standard.html">
-                                                        <span class="mm-text">Blog Standard</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-no-sidebar.html">
-                                                        <span class="mm-text">Blog No Sidebar</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="blog-masonary.html">
-                                                <span class="mm-text">Blog Masonary</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item-has-children has-children">
-                                            <a href="#">
-                                                <span class="mm-text">Blog Details</span>
-                                            </a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="single-post.html">
-                                                        <span class="mm-text">Single Post</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="single-post-sidebar.html">
-                                                        <span class="mm-text">Single Post Sidebar</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
                                         </li>
                                     </ul>
                                 </li>
@@ -440,32 +378,50 @@
                                     <i class="fa fa-user-circle-o"></i>
                                 </a>
                                 <ul class="user-info-menu">
-                                    <li>
-                                        <a href="my-account.html">My Account</a>
-                                    </li>
-                                    <li>
-                                        <a href="cart.html">Shopping Cart</a>
-                                    </li>
-                                    <li>
-                                        <a href="checkout.html">Check Out</a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.html">Wishlist</a>
-                                    </li>
-                                    <li>
-                                        <a href="order-tracking.html">Order tracking</a>
-                                    </li>
-                                    <li>
-                                        <a href="compare.html">compare</a>
-                                    </li>
+                                    @guest
+                                        <li>
+                                            <a href="{{route('login')}}">Login</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('register')}}">Create Account</a>
+                                        </li>
+                                    @else
+                                        <li>
+                                            <a href="{{route('account')}}">My Account</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('basket')}}">Shopping Cart</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('checkout')}}">Check Out</a>
+                                        </li>
+                                        <li>
+                                            <a href="order-tracking.html">Order tracking</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </li>
+
+                                    @endguest
                                 </ul>
                             </li>
+                            @guest
+                            @else
                             <li class="header-toolbar__item">
                                 <a href="#miniCart" class="mini-cart-btn toolbar-btn">
                                     <i class="dl-icon-cart4"></i>
-                                    <sup class="mini-cart-count">2</sup>
+                                    <sup class="mini-cart-count">{{$user->checkBasketOptions()->count()}}</sup>
                                 </a>
                             </li>
+                            @endguest
                             <li class="header-toolbar__item">
                                 <a href="#searchForm" class="search-btn toolbar-btn">
                                     <i class="dl-icon-search1"></i>

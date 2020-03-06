@@ -128,7 +128,7 @@
                     <div class="banner-box banner-type-5 banner-hover-3">
                         <div class="banner-inner">
                             <div class="banner-image">
-                                <img src="{{Voyager::image($featuresBig[$x]->product->thumbnail()->image)}}" alt="assets/img/banner/m05-banner1.jpg">
+                                <img src="{{Voyager::image($featuresBig[$x]->product->thumbnail()->image)}}" alt="{{asset('assets/img/banner/m05-banner1.jpg')}}">
                             </div>
                             <div class="banner-info">
                                 <!--<div class="banner-info--inner">
@@ -141,7 +141,7 @@
                                     <p class="banner-title-5 mt--10 mb--20">Don't Miss This Chance</p>
                                 </div>-->
                                 <a class="btn btn-medium btn-style-1 btn-bordered mt--30 mt-lg--10"
-                                   href="shop-sidebar.html">Shop Now</a>
+                                   href="">Shop Now</a>
                             </div>
                             <a class="banner-link banner-overlay" href="shop-sidebar.html">Shop Now</a>
                         </div>
@@ -186,16 +186,16 @@
                             @foreach($category as $cat)
                                 <div class="tab-pane" id="nav-{{$cat->slug}}" role="tabpanel" aria-labelledby="nav-{{$cat->slug}}-tab">
                                     <div class="row">
-                                        @foreach($cat->products()->get() as $product)
+                                        @foreach($cat->products as $product)
                                             <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
                                                 <div class="airi-product">
                                                     <div class="product-inner">
                                                         <figure class="product-image">
                                                             <div class="product-image--holder">
-                                                                <a href="product-details.html">
-                                                                    <img src="{{Voyager::image($product->thumbnail()->thumbnail('cropped'))}}"
+                                                                <a href="">
+                                                                    <img src="{{Voyager::image($product->thumbnail()->thumbnail("cropped"))}}"
                                                                          alt="Product Image" class="primary-image">
-                                                                    <img src="{{Voyager::image($product->thumbnail()->thumbnail('cropped'))}}"
+                                                                    <img src="{{Voyager::image($product->thumbnail()->thumbnail("cropped"))}}"
                                                                          alt="Product Image" class="secondary-image">
                                                                 </a>
                                                             </div>
@@ -253,9 +253,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-17-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-17-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-17-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-17-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -306,9 +306,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-16-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-16-4-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-16-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-16-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -360,9 +360,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-3-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-3-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-3-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-3-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -411,9 +411,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-11-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-11-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-11-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-11-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -465,9 +465,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-10-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-10-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-10-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-10-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -517,9 +517,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-19-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-4-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-19-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -577,9 +577,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-9-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-9-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-9-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-9-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -628,9 +628,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-7-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-7-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-7-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-7-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -680,9 +680,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-20-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-20-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-20-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-20-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -732,9 +732,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-15-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-15-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-15-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-15-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -798,9 +798,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-4-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-4-3-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-4-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-4-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -850,9 +850,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-12-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-12-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-12-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-12-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -901,9 +901,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-6-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-6-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-6-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-6-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -953,9 +953,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-8-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-8-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-8-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-8-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1004,9 +1004,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-19-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-19-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1055,9 +1055,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-2-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-2-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-2-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-2-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1111,9 +1111,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-17-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-17-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-17-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-17-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1164,9 +1164,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-16-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-16-4-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-16-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-16-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1218,9 +1218,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-3-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-3-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-3-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-3-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1269,9 +1269,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-11-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-11-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-11-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-11-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1323,9 +1323,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-10-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-10-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-10-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-10-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1375,9 +1375,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-19-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-4-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-19-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1435,9 +1435,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-9-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-9-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-9-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-9-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1486,9 +1486,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-7-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-7-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-7-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-7-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1538,9 +1538,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-20-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-20-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-20-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-20-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1590,9 +1590,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-15-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-15-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-15-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-15-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1656,9 +1656,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-4-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-4-3-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-4-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-4-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1708,9 +1708,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-12-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-12-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-12-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-12-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1759,9 +1759,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-6-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-6-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-6-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-6-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1811,9 +1811,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-8-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-8-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-8-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-8-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1862,9 +1862,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-19-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-19-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1913,9 +1913,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-2-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-2-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-2-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-2-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -1970,9 +1970,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-17-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-17-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-17-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-17-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2023,9 +2023,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-16-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-16-4-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-16-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-16-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2077,9 +2077,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-3-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-3-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-3-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-3-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2128,9 +2128,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-11-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-11-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-11-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-11-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2182,9 +2182,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-10-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-10-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-10-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-10-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2234,9 +2234,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-19-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-4-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-19-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2294,9 +2294,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-9-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-9-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-9-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-9-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2345,9 +2345,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-7-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-7-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-7-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-7-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2397,9 +2397,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-20-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-20-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-20-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-20-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2449,9 +2449,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-15-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-15-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-15-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-15-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2515,9 +2515,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-4-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-4-3-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-4-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-4-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2567,9 +2567,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-12-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-12-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-12-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-12-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2618,9 +2618,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-6-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-6-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-6-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-6-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2670,9 +2670,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-8-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-8-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-8-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-8-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2721,9 +2721,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-19-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-19-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2772,9 +2772,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-2-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-2-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-2-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-2-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2829,9 +2829,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-17-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-17-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-17-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-17-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2882,9 +2882,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-16-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-16-4-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-16-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-16-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2936,9 +2936,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-3-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-3-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-3-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-3-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -2987,9 +2987,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-11-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-11-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-11-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-11-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3041,9 +3041,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-10-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-10-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-10-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-10-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3093,9 +3093,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-19-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-4-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-19-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3153,9 +3153,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-9-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-9-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-9-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-9-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3204,9 +3204,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-7-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-7-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-7-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-7-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3256,9 +3256,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-20-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-20-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-20-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-20-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3308,9 +3308,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-15-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-15-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-15-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-15-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3374,9 +3374,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-4-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-4-3-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-4-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-4-2-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3426,9 +3426,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-12-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-12-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-12-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-12-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3477,9 +3477,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-6-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-6-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-6-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-6-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3529,9 +3529,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-8-2-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-8-2-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-8-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-8-1-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3580,9 +3580,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-19-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-19-4-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-19-4-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3631,9 +3631,9 @@
                                                 <figure class="product-image">
                                                     <div class="product-image--holder">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/products/prod-2-1-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-2-1-1.jpg')}}"
                                                                  alt="Product Image" class="primary-image">
-                                                            <img src="assets/img/products/prod-2-3-1.jpg"
+                                                            <img src="{{asset('assets/img/products/prod-2-3-1.jpg')}}"
                                                                  alt="Product Image" class="secondary-image">
                                                         </a>
                                                     </div>
@@ -3730,28 +3730,28 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-md--30">
                     <div class="method-box method-box-2 text-center">
-                        <img src="assets/img/icons/icon-1.png" alt="Icon">
+                        <img src="{{asset('assets/img/icons/icon-1.png')}}" alt="Icon">
                         <h4 class="mt--20">FREESHIPPING WORLD WIDE</h4>
                         <p>Freeship over oder $100</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-md--30">
                     <div class="method-box method-box-2 text-center">
-                        <img src="assets/img/icons/icon-2.png" alt="Icon">
+                        <img src="{{asset('assets/img/icons/icon-2.png')}}" alt="Icon">
                         <h4 class="mt--20">30 DAYS MONEY Returns</h4>
                         <p>Derabitur eget vehicula</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-sm--30">
                     <div class="method-box method-box-2 text-center">
-                        <img src="assets/img/icons/icon-3.png" alt="Icon">
+                        <img src="{{asset('assets/img/icons/icon-3.png')}}" alt="Icon">
                         <h4 class="mt--20">SUPPORT 24/7</h4>
                         <p>Dedicated Support</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="method-box method-box-2 text-center">
-                        <img src="assets/img/icons/icon-4.png" alt="Icon">
+                        <img src="{{asset('assets/img/icons/icon-4.png')}}" alt="Icon">
                         <h4 class="mt--20">100% SECURE CHECKOUT</h4>
                         <p>Protect buyer &amp; Security</p>
                     </div>
@@ -3763,20 +3763,20 @@
 @endsection
 @section('scripts')
     <!-- REVOLUTION JS FILES -->
-    <script src="assets/js/revoulation/jquery.themepunch.tools.min.js"></script>
-    <script src="assets/js/revoulation/jquery.themepunch.revolution.min.js"></script>
+    <script src="{{asset('assets/js/revoulation/jquery.themepunch.tools.min.js')}}"></script>
+    <script src="{{asset('assets/js/revoulation/jquery.themepunch.revolution.min.js')}}"></script>
 
     <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-    <script src="assets/js/revoulation/extensions/revolution.extension.actions.min.js"></script>
-    <script src="assets/js/revoulation/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="assets/js/revoulation/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="assets/js/revoulation/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="assets/js/revoulation/extensions/revolution.extension.migration.min.js"></script>
-    <script src="assets/js/revoulation/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="assets/js/revoulation/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="assets/js/revoulation/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="assets/js/revoulation/extensions/revolution.extension.video.min.js"></script>
+    <script src="{{asset('assets/js/revoulation/extensions/revolution.extension.actions.min.js')}}"></script>
+    <script src="{{asset('assets/js/revoulation/extensions/revolution.extension.carousel.min.js')}}"></script>
+    <script src="{{asset('assets/js/revoulation/extensions/revolution.extension.kenburn.min.js')}}"></script>
+    <script src="{{asset('assets/js/revoulation/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+    <script src="{{asset('assets/js/revoulation/extensions/revolution.extension.migration.min.js')}}"></script>
+    <script src="{{asset('assets/js/revoulation/extensions/revolution.extension.navigation.min.js')}}"></script>
+    <script src="{{asset('assets/js/revoulation/extensions/revolution.extension.parallax.min.js')}}"></script>
+    <script src="{{asset('assets/js/revoulation/extensions/revolution.extension.slideanims.min.js')}}"></script>
+    <script src="{{asset('assets/js/revoulation/extensions/revolution.extension.video.min.js')}}"></script>
 
     <!-- REVOLUTION ACTIVE JS FILES -->
-    <script src="assets/js/revoulation.js"></script>
+    <script src="{{asset('assets/js/revoulation.js')}}"></script>
 @endsection

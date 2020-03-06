@@ -6,7 +6,7 @@
                     <div class="col-4">
                         <a href="index.html" class="logo-box">
                             <figure class="logo--normal">
-                                <img src="assets/img/logo/logo.svg" alt="Logo">
+                                <img src="{{asset('assets/img/logo/logo.svg')}}" alt="Logo">
                             </figure>
                         </a>
                     </div>
